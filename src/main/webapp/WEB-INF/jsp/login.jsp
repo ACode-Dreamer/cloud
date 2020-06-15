@@ -29,7 +29,7 @@
 				</div>
 			</div>
 			<div class="loginContent">
-				<form class="content" action="login.do" method="post"
+				<form class="content" action="login" method="post"
 					onsubmit="return checkLoad()">
 					<p style="text-align: center; font-size: 18px;">账号密码登录</p>
 					<input name="username" id="username" type="text"

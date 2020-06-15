@@ -3,23 +3,47 @@
   <component name="PersistentConfig">
     <option name="historyConfigList">
       <map>
-        <entry key="cd_user">
+        <entry key="cd_file">
           <value>
             <Config>
               <option name="comment" value="true" />
               <option name="daoMvnPath" value="src/main/java" />
-              <option name="daoName" value="CdUserDao" />
+              <option name="daoName" value="CdFileDao" />
               <option name="daoPackage" value="generate" />
               <option name="daoPostfix" value="Dao" />
               <option name="modelMvnPath" value="src/main/java" />
-              <option name="modelName" value="CdUser" />
+              <option name="modelName" value="CdFile" />
               <option name="modelPackage" value="generate" />
-              <option name="name" value="cd_user" />
+              <option name="name" value="cd_file" />
               <option name="overrideJava" value="true" />
               <option name="overrideXML" value="true" />
               <option name="primaryKey" value="" />
               <option name="projectFolder" value="$PROJECT_DIR$" />
-              <option name="tableName" value="cd_user" />
+              <option name="tableName" value="cd_file" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="cd_folder">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CdFolderDao" />
+              <option name="daoPackage" value="generate" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="CdFolder" />
+              <option name="modelPackage" value="generate" />
+              <option name="name" value="cd_folder" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="folderId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="cd_folder" />
               <option name="useLombokPlugin" value="true" />
               <option name="useSchemaPrefix" value="true" />
               <option name="xmlMvnPath" value="src/main/resources" />

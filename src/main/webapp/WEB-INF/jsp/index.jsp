@@ -13,7 +13,7 @@
 <title>云端网盘</title>
 <link rel="stylesheet" type="text/css" href="${basePath}/static/css/index.css">
 <link rel="stylesheet" type="text/css" href="${basePath}/static/css/jquery/easyui.css">
-<link rel="stylesheet" type="text/css" href="${basePath}/static/css/jquery/icon.css">
+<%--<link rel="stylesheet" type="text/css" href="${basePath}/static/css/jquery/icon.css">--%>
 <link rel="stylesheet" type="text/css" href="${basePath}/static/css/jquery/demo.css">
 <script type="text/javascript" src="${basePath}/static/js/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="${basePath}/static/js/jquery/jquery.easyui.min.js"></script>
@@ -39,8 +39,8 @@
 				</div>
 				<div class="bannerCenter">
 					<ul>
-						<li class="active"><a href="index.do">网盘</a></li>
-						<li><a href="index.do">分享</a></li>
+						<li class="active"><a href="index">网盘</a></li>
+						<li><a href="index">分享</a></li>
 						<li><a href="fileupload.jsp">正在上传</a></li>
 						<li><a href="filedownload.jsp">正在下载</a></li>
 					</ul>
@@ -55,6 +55,16 @@
 			<div class="content">
 				<div class="contentLeft" id="contentLeft">
 					<ul>
+						<li class="active"><span class="contentBg bg1"></span>
+							<a href="index.do?folderId=${rf.folderId}"> 文件</a>
+						</li>
+						<li><span class="contentBg bg1"></span>
+							<a href="index.do?folderId=${rf.folderId}"> 视频</a>
+						</li>
+						<li><span class="contentBg bg1"></span>
+							<a href="index.do?folderId=${rf.folderId}"> 图片</a>
+						</li>
+
 						<c:forEach var="rf" items="${sessionScope.sysFolderList }">
 							<li
 								<c:if test="${sessionScope.currentFolder.hdfsPath==rf.hdfsPath }">class="active"</c:if>>
@@ -63,7 +73,7 @@
 							</li>
 						</c:forEach>
 						<li><span class="contentBg bg2"></span><a href="">我的分享</a></li>
-						<li><span class="contentBg bg3"></span><a href="recycle.do">回收站</a></li>
+						<li><span class="contentBg bg3"></span><a href="recycle">回收站</a></li>
 					</ul>
 				</div>
 				<div class="contentRight" id="contentRight">
@@ -110,28 +120,28 @@
 								<tr>
 									<td><input type="checkbox" disabled="disabled"
 										style="margin-right: 10px; margin-right: 50px" /> <a
-										href="index.do?folderId=${rf.folderId}"><span
-											class="folder"></span> <c:out value="${rf.folderName }"></c:out></a></td>
+										href="index.do?folderId=${rf.folderid}"><span
+											class="folder"></span> <c:out value="${rf.foldername }"></c:out></a></td>
 									<td class="hideArea"><a
-										href="index.do?folderId=${rf.folderId}"><span
+										href="index.do?folderId=${rf.folderid}"><span
 											class="share"></span></a></td>
 									<td>目录</td>
 									<td>-</td>
-									<td><c:out value="${rf.createTime }"></c:out></td>
+									<td><c:out value="${rf.createtime }"></c:out></td>
 								</tr>
 							</c:forEach>
 							<c:forEach var="rf" items="${sessionScope.fileList }">
 								<tr>
-									<td><input type="checkbox" value="${rf.fileId }"
+									<td><input type="checkbox" value="${rf.fileid }"
 										style="margin-right: 10px; margin-right: 50px" /> <span
-										class="myfile"></span> <c:out value="${rf.fileName }"></c:out></td>
+										class="myfile"></span> <c:out value="${rf.filename }"></c:out></td>
 									<td class="hideArea"><span class="huishouq"
-										onclick="deleteFileFun(${rf.fileId})"></span> <a
-										href="hdfs.do?type=download&fileId=${rf.fileId }"><span
+										onclick="deleteFileFun(${rf.fileid})"></span> <a
+										href="hdfs.do?type=download&fileId=${rf.fileid }"><span
 											class="download"></span></a></td>
 									<td>文件</td>
-									<td><c:out value="${rf.fileSize }"></c:out></td>
-									<td><c:out value="${rf.createTime }"></c:out></td>
+									<td><c:out value="${rf.filesize }"></c:out></td>
+									<td><c:out value="${rf.createtime }"></c:out></td>
 								</tr>
 							</c:forEach>
 						</table>

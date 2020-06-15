@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.dao.FileDao">
+    <resultMap id="BaseResultMap" type="generate.CdFile">
+        <result column="fileId" jdbcType="INTEGER" property="fileid" />
+        <result column="fileName" jdbcType="VARCHAR" property="filename" />
+        <result column="folderId" jdbcType="INTEGER" property="folderid" />
+        <result column="typeId" jdbcType="INTEGER" property="typeid" />
+        <result column="userId" jdbcType="INTEGER" property="userid" />
+        <result column="createTime" jdbcType="VARCHAR" property="createtime" />
+        <result column="owner" jdbcType="VARCHAR" property="owner" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="hdfsPath" jdbcType="VARCHAR" property="hdfspath" />
+        <result column="fileSize" jdbcType="INTEGER" property="filesize" />
+        <result column="mark" jdbcType="VARCHAR" property="mark" />
+    </resultMap>
+    <select id="queryFile" parameterType="int" resultMap="BaseResultMap">
+        select * from cd_file where userId = #{userId}
+    </select>
+</mapper>

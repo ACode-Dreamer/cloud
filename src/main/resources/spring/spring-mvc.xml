@@ -32,4 +32,14 @@
 
     <!-- 4.扫描web相关的bean -->
     <context:component-scan base-package="com.ssm.controller" />
+
+
+    <!-- 配置拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- 拦截所有mvc控制器 -->
+            <mvc:mapping path="/**"/>
+            <bean class="com.ssm.interceptor.LoginInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

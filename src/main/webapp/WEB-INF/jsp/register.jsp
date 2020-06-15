@@ -33,7 +33,7 @@
 		<div class="content">
 			<div class="reContent">
 				<div class="reContentLeft">
-					<form action="register.do" method="post"
+					<form action="register" method="post"
 						onsubmit="return checkLoad()">
 						<div>
 							用户名称：<input type="text" id="username" name="username"

@@ -6,20 +6,28 @@ import java.io.Serializable;
 
 @Data
 public class File implements Serializable {
+	private Integer fileid;
 
-	private static final long serialVersionUID = -6446936696907562299L;
+	private String filename;
 
-	private int fileId;
-	private String fileName;
-	private int folderId;
-	private int typeId;
-	private int userId;
-	private String createTime;
+	private Integer folderid;
+
+	private Integer typeid;
+
+	private Integer userid;
+
+	private String createtime;
+
 	private String owner;
-	private int status;
-	private String hdfsPath;
-	private int fileSize;
+
+	private Integer status;
+
+	private String hdfspath;
+
+	private Integer filesize;
+
 	private String mark;
 
+	private static final long serialVersionUID = 1L;
 
 }

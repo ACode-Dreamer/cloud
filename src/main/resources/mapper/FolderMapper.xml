@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.dao.FolderDao">
+    <resultMap id="BaseResultMap" type="generate.CdFolder">
+        <id column="folderId" jdbcType="INTEGER" property="folderid" />
+        <result column="folderName" jdbcType="VARCHAR" property="foldername" />
+        <result column="hdfsPath" jdbcType="VARCHAR" property="hdfspath" />
+        <result column="parentId" jdbcType="INTEGER" property="parentid" />
+        <result column="owner" jdbcType="VARCHAR" property="owner" />
+        <result column="userId" jdbcType="INTEGER" property="userid" />
+        <result column="createTime" jdbcType="VARCHAR" property="createtime" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="mark" jdbcType="VARCHAR" property="mark" />
+    </resultMap>
+    <select id="queryFolder" parameterType="int" resultMap="BaseResultMap">
+        select * from cd_folder where userId = #{userId}
+    </select>
+</mapper>
