@@ -45,12 +45,12 @@ public class UserController {
             } else {
                 //注册失败
                 model.addAttribute("msg", "注册失败");
-                return "register";
+                return "forward:register";
             }
         } else {
             //用户已存在
             model.addAttribute("msg", "用户已存在");
-            return "register";
+            return "forward:register";
         }
     }
 
@@ -60,7 +60,7 @@ public class UserController {
         if (login == null) {
             //登录失败
             model.addAttribute("msg", "登录失败");
-            return "login";
+            return "forward:login";
         } else {
             //登录成功
             httpSession.setAttribute("user", user);
