@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.dao.UserDao">
+    <resultMap id="BaseResultMap" type="com.ssm.pojo.User">
+        <result column="userId" jdbcType="INTEGER" property="userid" />
+        <result column="userName" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="telephone" jdbcType="VARCHAR" property="telephone" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+        <result column="roleId" jdbcType="INTEGER" property="roleid" />
+        <result column="isVip" jdbcType="VARCHAR" property="isvip" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+    </resultMap>
+    <insert id="register"  parameterType="User">
+    insert into cd_user (userId, userName, `password`,
+      telephone, email, roleId,
+      isVip, `status`)
+    values (#{userid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
+      #{telephone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{roleid,jdbcType=INTEGER},
+      #{isvip,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
+    </insert>
+    <select id="login" parameterType="User" resultMap="BaseResultMap">
+        select * from  cd_user where userName = #{username} and password = #{password}
+    </select>
+    <select id="existUser" parameterType="User" resultType="integer">
+        SELECT COUNT(userName) FROM cd_user where userName = #{username}
+    </select>
+</mapper>

@@ -1,0 +1,1016 @@
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \000032
+	}
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \000036
+	}
+}
+
+li {
+	list-style: none;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \000037
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \000038
+	}
+}
+
+body {
+	background: #EFF4F8;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000310
+	}
+}
+
+body #index {
+	width: 100%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000312
+	}
+}
+
+body #index .cloud {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000315
+	}
+}
+
+body #index .cloud .banner {
+	height: 60px;
+	line-height: 60px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000318
+	}
+}
+
+body #index .cloud .banner div {
+	float: left;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000322
+	}
+}
+
+body #index .cloud .banner .bannerLeft span {
+	display: inline-block;
+	float: left;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000326
+	}
+}
+
+body #index .cloud .banner .bannerLeft .logoBg {
+	width: 90px;
+	height: 60px;
+	background: url("../images/logo.png") no-repeat;
+	background-position: 0 16px;
+	margin-right: 10px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000334
+	}
+}
+
+body #index .cloud .banner .bannerCenter {
+	margin-left: 20px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000336
+	}
+}
+
+body #index .cloud .banner .bannerCenter ul {
+	margin-top: 10px;
+	height: 40px;
+	line-height: 40px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000340
+	}
+}
+
+body #index .cloud .banner .bannerCenter ul li {
+	float: left;
+	margin-left: 50px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000345
+	}
+}
+
+body #index .cloud .banner .bannerCenter ul li:hover {
+	border-bottom: 4px solid #3B8CFF;
+	color: #3B8CFF;
+	border-radius: 2px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000351
+	}
+}
+
+body #index .cloud .banner .bannerCenter ul .active {
+	border-bottom: 4px solid #3B8CFF;
+	color: #3B8CFF;
+	border-radius: 2px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000358
+	}
+}
+
+body #index .cloud .banner .bannerRight {
+	float: right;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000360
+	}
+}
+
+body #index .cloud .banner .bannerRight span {
+	display: inline-block;
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	font-size: 14px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000367
+	}
+}
+
+body #index .cloud .banner .bannerRight .person {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #D7DBDF;
+	border-radius: 20px;
+	overflow: hidden;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000375
+	}
+}
+
+body #index .cloud .banner .bannerRight .person img {
+	width: 100%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000379
+	}
+}
+
+body #index .cloud .banner .bannerRight .center {
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	background: #F8645C;
+	color: #fff;
+	border-radius: 15px;
+	text-align: center;
+	margin-top: 15px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000393
+	}
+}
+
+body #index .cloud .content {
+	margin-top: 10px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000395
+	}
+}
+
+body #index .cloud .content .contentLeft {
+	float: left;
+	width: 16%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \0000398
+	}
+}
+
+body #index .cloud .content .contentLeft ul {
+	margin-top: 20px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003100
+	}
+}
+
+body #index .cloud .content .contentLeft ul li {
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+	margin-left: -40px;
+	padding-left: 70px;
+	position: relative;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003107
+	}
+}
+
+body #index .cloud .content .contentLeft ul li:hover {
+	background: #E3E8EB;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003110
+	}
+}
+
+body #index .cloud .content .contentLeft ul li a {
+	font-size: 14px;
+	color: #424E67;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003114
+	}
+}
+
+body #index .cloud .content .contentLeft ul li:hover a {
+	color: #3B8CFF;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003117
+	}
+}
+
+body #index .cloud .content .contentLeft ul li .contentBg {
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 40px;
+	top: 10px;
+	z-index: 2px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003126
+	}
+}
+
+body #index .cloud .content .contentLeft ul li .bg1 {
+	background: url("../images/file.png") no-repeat;
+	background-size: 100%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003130
+	}
+}
+
+body #index .cloud .content .contentLeft ul li .bg2 {
+	background: url("../images/sha.png") no-repeat;
+	background-size: 100%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003134
+	}
+}
+
+body #index .cloud .content .contentLeft ul li .bg3 {
+	background: url("../images/huishouq.png") no-repeat;
+	background-size: 100%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003139
+	}
+}
+
+body #index .cloud .content .contentLeft ul .active {
+	background: #E3E8EB;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003141
+	}
+}
+
+body #index .cloud .content .contentLeft ul .active a {
+	color: #3B8CFF;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003147
+	}
+}
+
+body #index .cloud .content .contentRight {
+	float: left;
+	width: 80.5%;
+	background: #fff;
+	padding-bottom: 40px;
+	margin-left: 30px;
+	border: 1px solid #D8DFEA;
+	border-radius: 4px;
+	position: relative;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003156
+	}
+}
+
+body #index .cloud .content .contentRight .fixedBtn {
+	position: absolute;
+	width: 15px;
+	padding: 5px;
+	font-size: 14px;
+	background: #3B8CFF;
+	border-radius: 4px;
+	color: #fff;
+	font-weight: bold;
+	top: 0;
+	left: -25px;
+	cursor: pointer;
+	visibility: hidden;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003170
+	}
+}
+
+body #index .cloud .content .contentRight:hover .fixedBtn {
+	visibility: visible;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003173
+	}
+}
+
+body #index .cloud .content .contentRight .operat {
+	padding: 20px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003175
+	}
+}
+
+body #index .cloud .content .contentRight .operat .operatLeft {
+	float: left;
+	margin-left: -10px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003178
+	}
+}
+
+body #index .cloud .content .contentRight .operat .operatLeft div {
+	float: left;
+	height: 20px;
+	line-height: 20px;
+	padding: 5px 10px 5px 30px;
+	border: 1px solid #C0D9FE;
+	margin-left: 10px;
+	border-radius: 4px;
+	position: relative;
+	color: #3B8CFF;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003190
+	}
+}
+
+body #index .cloud .content .contentRight .operat .operatLeft div:hover
+	{
+	background: #3B8CFF;
+	color: #fff;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003194
+	}
+}
+
+body #index .cloud .content .contentRight .operat .operatLeft div .operatLeftBg
+	{
+	display: block;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 6px;
+	left: 5px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003202
+	}
+}
+
+body #index .cloud .content .contentRight .operat .operatLeft div .bg1 {
+	background: url("../images/share.png") no-repeat;
+	background-size: 100%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003206
+	}
+}
+
+body #index .cloud .content .contentRight .operat .operatLeft div .bg2 {
+	background: url("../images/folder.png") no-repeat;
+	background-size: 100%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003210
+	}
+}
+
+body #index .cloud .content .contentRight .operat .operatLeft div .bg3 {
+	background: url("../images/download.png") no-repeat;
+	background-size: 100%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003214
+	}
+}
+
+body #index .cloud .content .contentRight .operat .operatLeft div .bg4 {
+	background: url("../images/Mobile-phone.png") no-repeat;
+	background-size: 100%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003220
+	}
+}
+
+body #index .cloud .content .contentRight .operat .operatRight {
+	float: right;
+	position: relative;
+	padding-right: 100px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003224
+	}
+}
+
+body #index .cloud .content .contentRight .operat .operatRight input {
+	width: 170px;
+	height: 35px;
+	line-height: 35px;
+	border: none;
+	background: #F1F2F4;
+	padding-left: 18px;
+	padding-right: 45px;
+	border-radius: 15px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003234
+	}
+}
+
+body #index .cloud .content .contentRight .operat .operatRight .searchBg
+	{
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 7px;
+	left: 195px;
+	background: url("../images/search.png") no-repeat;
+	background-size: 100%;
+	cursor: pointer;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003245
+	}
+}
+
+body #index .cloud .content .contentRight .operat .operatRight .sort {
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 7px;
+	right: 60px;
+	background: url("../images/Viewlist.png") no-repeat;
+	background-size: 100%;
+	cursor: pointer;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003256
+	}
+}
+
+body #index .cloud .content .contentRight .operat .operatRight .sortTwo
+	{
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 7px;
+	right: 20px;
+	background: url("../images/ViewGallery.png") no-repeat;
+	cursor: pointer;
+	background-size: 100%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003269
+	}
+}
+
+body #index .cloud .content .contentRight .file {
+	padding-left: 20px;
+	width: 100%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003272
+	}
+}
+
+body #index .cloud .content .contentRight .file table {
+	width: 96%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003274
+	}
+}
+
+body #index .cloud .content .contentRight .file table tr {
+	height: 40px;
+	line-height: 40px;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003277
+	}
+}
+
+body #index .cloud .content .contentRight .file table tr td {
+	font-size: 12px;
+	color: #444;
+	position: relative;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003281
+	}
+}
+
+body #index .cloud .content .contentRight .file table tr td .folder {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	top: 5px;
+	left: 30px;
+	background: url("../images/folder1.png") no-repeat;
+	background-size: 100%;
+}
+
+body #index .cloud .content .contentRight .file table tr td .myfile {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	top: 5px;
+	left: 30px;
+	background: url("../images/file.png") no-repeat;
+	background-size: 100%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003292
+	}
+}
+
+body #index .cloud .content .contentRight .file table tr .hideArea {
+	visibility: hidden;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003294
+	}
+}
+
+body #index .cloud .content .contentRight .file table tr .hideArea span
+	{
+	display: block;
+	float: left;
+	cursor: pointer;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003299
+	}
+}
+
+body #index .cloud .content .contentRight .file table tr .hideArea .huishouq
+	{
+	width: 20px;
+	height: 20px;
+	background: url("../images/huishouq.png") no-repeat;
+	background-size: 100%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003305
+	}
+}
+
+body #index .cloud .content .contentRight .file table tr .hideArea .download
+	{
+	margin-left: 20px;
+	width: 20px;
+	height: 20px;
+	background: url("../images/download.png") no-repeat;
+	background-size: 100%;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003313
+	}
+}
+
+body #index .cloud .content .contentRight .file table tr:hover {
+	background: #F2F6FD;
+}
+
+@media -sass-debug-info {
+	filename {
+		font-family:
+			file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/index\.scss
+	}
+	line {
+		font-family: \00003316
+	}
+}
+
+body #index .cloud .content .contentRight .file table tr:hover .hideArea
+	{
+	visibility: visible;
+}

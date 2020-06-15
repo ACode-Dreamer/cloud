@@ -1,0 +1,215 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\000032}}
+* {
+  margin: 0;
+  padding: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\000036}}
+li {
+  list-style: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\000037}}
+a {
+  text-decoration: none;
+  color: #fff; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000312}}
+#cloud .login {
+  width: 100%;
+  height: 550px;
+  background: url("../images/loginBg.jpg") no-repeat;
+  background-size: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000317}}
+  #cloud .login .loginTop {
+    padding: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000319}}
+    #cloud .login .loginTop .topLeft {
+      float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000321}}
+      #cloud .login .loginTop .topLeft span {
+        display: block;
+        float: left;
+        height: 36px;
+        line-height: 36px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000327}}
+      #cloud .login .loginTop .topLeft .logo {
+        width: 60px;
+        background: url("../images/qst.png") no-repeat; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000331}}
+      #cloud .login .loginTop .topLeft .logoName {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000338}}
+    #cloud .login .loginTop .topRight {
+      float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000340}}
+      #cloud .login .loginTop .topRight li {
+        float: left;
+        margin-left: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000343}}
+        #cloud .login .loginTop .topRight li a {
+          font-size: 16px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000347}}
+  #cloud .login .loginContent {
+    clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000349}}
+    #cloud .login .loginContent .content {
+      margin-top: 40px;
+      margin-right: 100px;
+      float: right;
+      width: 320px;
+      padding: 40px;
+      background: #fff; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000356}}
+      #cloud .login .loginContent .content .ip {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #E7E7E7; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000364}}
+      #cloud .login .loginContent .content .ip:focus {
+        border-color: #2BCBF8; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000367}}
+      #cloud .login .loginContent .content .remeber {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #666;
+        margin-left: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000372}}
+        #cloud .login .loginContent .content .remeber input {
+          margin-right: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000376}}
+      #cloud .login .loginContent .content .logon {
+        width: 98%;
+        margin: 0 auto;
+        margin-top: 20px;
+        border: none;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 5px;
+        background: #5D9BF9;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000389}}
+      #cloud .login .loginContent .content .loginType {
+        margin-top: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000391}}
+        #cloud .login .loginContent .content .loginType .floatLi {
+          float: left;
+          margin-right: 20px;
+          background: url("../images/icons.png") no-repeat;
+          cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\0000397}}
+        #cloud .login .loginContent .content .loginType .phone {
+          background: none;
+          font-weight: bold;
+          font-size: 14px;
+          margin-left: 8px;
+          line-height: 30px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003103}}
+          #cloud .login .loginContent .content .loginType .phone:hover {
+            color: #5D9BF9;
+            text-decoration: underline; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003108}}
+        #cloud .login .loginContent .content .loginType .Bg1 {
+          width: 25px;
+          height: 25px;
+          background-position: -63px 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003109}}
+        #cloud .login .loginContent .content .loginType .Bg2 {
+          width: 25px;
+          height: 25px;
+          background-position: -88px 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003110}}
+        #cloud .login .loginContent .content .loginType .Bg3 {
+          width: 25px;
+          height: 25px;
+          background-position: -112px 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003111}}
+        #cloud .login .loginContent .content .loginType .Bg4 {
+          width: 25px;
+          height: 25px;
+          background-position: -143px -99px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003113}}
+      #cloud .login .loginContent .content .loginBottom {
+        height: 60px;
+        margin: -40px;
+        margin-top: 20px;
+        background: #F3F8FF;
+        line-height: 60px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003120}}
+        #cloud .login .loginContent .content .loginBottom ul li {
+          float: right;
+          margin-bottom: -40px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003123}}
+          #cloud .login .loginContent .content .loginBottom ul li a {
+            color: #666; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003125}}
+            #cloud .login .loginContent .content .loginBottom ul li a:hover {
+              text-decoration: underline; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003129}}
+          #cloud .login .loginContent .content .loginBottom ul li input {
+            padding: 5px;
+            margin-right: 40px;
+            border: 1px solid #DFECFE;
+            background: #F3F8FF;
+            font-size: 14px;
+            border-radius: 5px;
+            color: #347FFF;
+            cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003138}}
+            #cloud .login .loginContent .content .loginBottom ul li input:hover {
+              border: 1px solid transparent;
+              text-decoration: underline; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003149}}
+#cloud .version {
+  width: 100%;
+  background: #EFF4F8;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003154}}
+  #cloud .version ul {
+    width: 50%;
+    margin: 0 auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003157}}
+    #cloud .version ul .bottom {
+      float: left;
+      width: 90px;
+      height: 70px;
+      margin-left: 40px;
+      background: url("../images/login-1.png") no-repeat;
+      cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003165}}
+    #cloud .version ul .versionBg1 {
+      background-position: -320px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003167}}
+      #cloud .version ul .versionBg1:hover {
+        background-position: -410px -70px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003171}}
+    #cloud .version ul .versionBg2 {
+      background-position: -500px -70px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003173}}
+      #cloud .version ul .versionBg2:hover {
+        background-position: -90px -160px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003177}}
+    #cloud .version ul .versionBg3 {
+      background-position: -180px -160px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003179}}
+      #cloud .version ul .versionBg3:hover {
+        background-position: 0px -160px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003183}}
+    #cloud .version ul .versionBg4 {
+      background-position: -268px -160px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003185}}
+      #cloud .version ul .versionBg4:hover {
+        background-position: -318px -70px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003189}}
+    #cloud .version ul .versionBg5 {
+      background-position: -500px 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/login\.scss}line{font-family:\00003191}}
+      #cloud .version ul .versionBg5:hover {
+        background-position: -410px 0px; }

@@ -1,0 +1,148 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\000032}}
+* {
+  margin: 0;
+  padding: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\000036}}
+li {
+  list-style: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\000037}}
+a {
+  text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\000038}}
+#register {
+  width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000310}}
+  #register .registerTop {
+    border-bottom: 1px solid #EBEBEB;
+    box-shadow: 5px 0 5px #EBEBEB; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000313}}
+    #register .registerTop .topContent {
+      padding: 20px 200px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000315}}
+      #register .registerTop .topContent .contentLeft {
+        float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000317}}
+        #register .registerTop .topContent .contentLeft span {
+          display: inline-block;
+          color: #666;
+          font-size: 20px;
+          height: 30px;
+          line-height: 30px;
+          float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000325}}
+        #register .registerTop .topContent .contentLeft .logoBg {
+          width: 230px;
+          background: url("../images/logo.png") no-repeat; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000330}}
+      #register .registerTop .topContent .contentRight {
+        float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000332}}
+        #register .registerTop .topContent .contentRight span {
+          font-size: 14px;
+          color: #333;
+          display: inline-block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000337}}
+        #register .registerTop .topContent .contentRight .login {
+          margin-left: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000339}}
+          #register .registerTop .topContent .contentRight .login input {
+            padding: 0 10px;
+            background: #F3F8FF;
+            border: 1px solid #BAD4FD;
+            border-radius: 2px;
+            color: #5D9BF9;
+            cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000346}}
+            #register .registerTop .topContent .contentRight .login input:hover {
+              color: #fff;
+              background: #5D9BF9; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000356}}
+  #register .content .reContent {
+    padding: 40px 200px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000358}}
+    #register .content .reContent .reContentLeft {
+      float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000361}}
+      #register .content .reContent .reContentLeft form div {
+        font-size: 16px;
+        color: #666;
+        font-weight: bold;
+        margin-top: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000366}}
+        #register .content .reContent .reContentLeft form div input {
+          margin-left: 15px;
+          padding: 10px 8px;
+          width: 300px;
+          border: 1px solid #ddd;
+          color: #aaa;
+          font-size: 14px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000373}}
+          #register .content .reContent .reContentLeft form div input:focus {
+            border: 1px solid #5796E6; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000378}}
+      #register .content .reContent .reContentLeft form .check {
+        margin-left: -80px;
+        font-size: 14px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000381}}
+        #register .content .reContent .reContentLeft form .check input {
+          margin-right: -140px;
+          display: inline-block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000385}}
+        #register .content .reContent .reContentLeft form .check span {
+          color: #5796E6; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000387}}
+      #register .content .reContent .reContentLeft form .regis {
+        margin-left: 60px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000389}}
+        #register .content .reContent .reContentLeft form .regis input {
+          width: 320px;
+          background: #4490F6;
+          color: #fff;
+          border-radius: 4px;
+          cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\0000399}}
+    #register .content .reContent .reContentRight {
+      float: right;
+      background: #F5FBFF;
+      width: 300px;
+      margin-top: 20px;
+      border: 1px solid #D1EEFF; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\00003105}}
+      #register .content .reContent .reContentRight .rightContent {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 50px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\00003109}}
+        #register .content .reContent .reContentRight .rightContent .phone {
+          height: 40px;
+          line-height: 40px;
+          border-bottom: 1px solid #E6EDF2; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\00003113}}
+          #register .content .reContent .reContentRight .rightContent .phone span {
+            display: inline-block;
+            float: left;
+            font-size: 14px;
+            color: #666;
+            font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\00003120}}
+          #register .content .reContent .reContentRight .rightContent .phone .phoneBg {
+            width: 25px;
+            height: 40px;
+            background: url("../images/phone.png") no-repeat;
+            background-position: 0 5px;
+            margin-right: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\00003128}}
+        #register .content .reContent .reContentRight .rightContent .send {
+          margin-top: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\00003130}}
+          #register .content .reContent .reContentRight .rightContent .send p {
+            font-size: 12px;
+            font-weight: bold;
+            color: #666; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/qiufen\/Desktop\/cloud\/scss\/register\.scss}line{font-family:\00003140}}
+  #register .reBottom {
+    margin-top: 40px;
+    text-align: center; }
