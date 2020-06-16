@@ -55,15 +55,24 @@
 			<div class="content">
 				<div class="contentLeft" id="contentLeft">
 					<ul>
-						<li class="active"><span class="contentBg bg1"></span>
-							<a href="index.do?folderId=${rf.folderId}"> 文件</a>
-						</li>
-						<li><span class="contentBg bg1"></span>
-							<a href="index.do?folderId=${rf.folderId}"> 视频</a>
-						</li>
-						<li><span class="contentBg bg1"></span>
+                        <li class="active"><span class="contentBg bg1"></span>
+                            <a href="index.do?folderId=${rf.folderId}"> 全部文件</a>
+                        </li>
+						<li>
 							<a href="index.do?folderId=${rf.folderId}"> 图片</a>
 						</li>
+						<li>
+							<a href="index.do?folderId=${rf.folderId}"> 文档</a>
+						</li>
+						<li>
+							<a href="index.do?folderId=${rf.folderId}"> 视频</a>
+						</li>
+                        <li>
+                            <a href="index.do?folderId=${rf.folderId}"> 音乐</a>
+                        </li>
+                        <li>
+                            <a href="index.do?folderId=${rf.folderId}"> 其他</a>
+                        </li>
 
 						<c:forEach var="rf" items="${sessionScope.sysFolderList }">
 							<li

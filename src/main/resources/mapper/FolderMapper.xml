@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ssm.dao.FolderDao">
-    <resultMap id="BaseResultMap" type="generate.CdFolder">
+    <resultMap id="BaseResultMap" type="Folder">
         <id column="folderId" jdbcType="INTEGER" property="folderid" />
         <result column="folderName" jdbcType="VARCHAR" property="foldername" />
         <result column="hdfsPath" jdbcType="VARCHAR" property="hdfspath" />

@@ -19,7 +19,7 @@ public class LoginInterceptor  implements HandlerInterceptor {
         HttpSession session = request.getSession();
         String requestURI = request.getRequestURI();
         if(requestURI.equals("/register") || requestURI.equals("/login")){
-            //登录注册不校验
+            //登录注册页面不校验
             return true;
         }else{
             //进行用户名校验
