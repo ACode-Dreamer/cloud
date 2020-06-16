@@ -1,5 +1,7 @@
 # netdisc
 基于ssm的私人云端网盘
+## 技术点
+ssm框架 log4j日志 druid连接池 lombok插件 fastjson
 ## 功能如下
 注册 
 注册成为网盘用户
