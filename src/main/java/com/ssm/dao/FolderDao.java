@@ -41,4 +41,26 @@ public interface FolderDao {
      * @return
      */
     Folder queryFolderByName(String currentFolder);
+
+
+    /**
+     * 查询所有删除的目录
+     * @param userid
+     * @return
+     */
+    List<Folder> queryRecyclePath(int userid);
+
+    /**
+     * flag删除目录
+     * @param folderId
+     * @return
+     */
+    int deleteFolder(int folderId);
+
+    /**
+     * 移除目录
+     * @param folderId
+     * @return
+     */
+    int removeFolder(int folderId);
 }

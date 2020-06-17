@@ -18,7 +18,49 @@
 <script type="text/javascript" src="${basePath}/static/js/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="${basePath}/static/js/jquery/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="${basePath}/static/js/index.js"></script>
+	<script type="text/javascript">
+		function removeFolderFun(folderId) {
+			var res = window.confirm("确定要删除该文件吗？");
+			if (res) {
+				$.ajax({
+					type: "post",
+					url: "removeFolder",
+					data: {folderId:folderId},
+					dataType: "json",
+					success: function(result){
+						console.log(result);
+						alert(result);
+						window.location.reload();
+					},
+					error:function () {
+						alert('错误');
+					}
+				});
+			}
+		}
 
+		function removeFileFun(fileId) {
+			var res = window.confirm("确定要删除该文件吗？");
+			if (res) {
+				//alert("删除了:" + fileId + "文件");
+				// window.location = "hdfs.do?type=deleteFile&fileId=" + fileId;
+				$.ajax({
+					type: "post",
+					url: "remove",
+					data: {fileId:fileId},
+					dataType: "json",
+					success: function(result){
+						console.log(result);
+						alert(result);
+						window.location.reload();
+					},
+					error:function () {
+						alert('错误');
+					}
+				});
+			}
+		}
+	</script>
 </head>
 <body>
 	<div id="index">
@@ -109,6 +151,8 @@
 									<td class="hideArea"><a
 											href="index.do?folderId=${rf.folderid}"><span
 											class="share"></span></a></td>
+									<td class="hideArea"><span class="huishouq"
+															   onclick="removeFolderFun(${rf.folderid})"></span> </td>
 									<td>目录</td>
 									<td>-</td>
 									<td><c:out value="${rf.createtime }"></c:out></td>
@@ -120,7 +164,7 @@
 											   style="margin-right: 10px; margin-right: 50px" /> <span
 											class="myfile"></span> <c:out value="${rf.filename }"></c:out></td>
 									<td class="hideArea"><span class="huishouq"
-															   onclick="deleteFileFun(${rf.fileid})"></span> <a
+															   onclick="removeFileFun(${rf.fileid})"></span> <a
 											href="hdfs.do?type=download&fileId=${rf.fileid }"><span
 											class="download"></span></a></td>
 									<td>文件</td>

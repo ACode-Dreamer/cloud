@@ -59,4 +59,34 @@ public class FolderServiceImpl implements FolderService {
     public Folder queryFolderByName(String currentFolder) {
         return folderDao.queryFolderByName(currentFolder);
     }
+
+    /**
+     * 查询删除的目录
+     * @param userid
+     * @return
+     */
+    @Override
+    public List<Folder> queryRecyclePath(int userid) {
+        return folderDao.queryRecyclePath(userid);
+    }
+
+    /**
+     * flag删除目录
+     * @param folderId
+     * @return
+     */
+    @Override
+    public int deleteFolder(int folderId) {
+        return folderDao.deleteFolder(folderId);
+    }
+
+    /**
+     * 移除目录
+     * @param folderId
+     * @return
+     */
+    @Override
+    public int removeFolder(int folderId) {
+        return folderDao.removeFolder(folderId);
+    }
 }

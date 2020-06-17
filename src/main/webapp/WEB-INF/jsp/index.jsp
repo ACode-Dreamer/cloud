@@ -3,6 +3,8 @@
 	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%--<%@ taglib prefix="spring" uri="http://java.sun.com/jsp/jstl/fmt" %>--%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
@@ -10,7 +12,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<title>云端网盘</title>
+<title><spring:message code="TITLE"/> </title>
 <link rel="stylesheet" type="text/css" href="${basePath}/static/css/index.css">
 <link rel="stylesheet" type="text/css" href="${basePath}/static/css/jquery/easyui.css">
 <%--<link rel="stylesheet" type="text/css" href="${basePath}/static/css/jquery/icon.css">--%>
@@ -19,13 +21,46 @@
 <script type="text/javascript" src="${basePath}/static/js/jquery/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="${basePath}/static/js/index.js"></script>
 <script type="text/javascript">
+	function deleteFolderFun(folderId) {
+		var res = window.confirm("确定要删除该文件吗？");
+		if (res) {
+			$.ajax({
+				type: "post",
+				url: "deleteFolder",
+				data: {folderId:folderId},
+				dataType: "json",
+				success: function(result){
+					console.log(result);
+					alert(result);
+					window.location.reload();
+				},
+				error:function () {
+					alert('错误');
+				}
+			});
+		}
+	}
+
 	function deleteFileFun(fileId) {
 		var res = window.confirm("确定要删除该文件吗？");
 		if (res) {
 			//alert("删除了:" + fileId + "文件");
-			window.location = "hdfs.do?type=deleteFile&fileId=" + fileId;
+			// window.location = "hdfs.do?type=deleteFile&fileId=" + fileId;
+		$.ajax({
+			type: "post",
+			url: "delete",
+			data: {fileId:fileId},
+			dataType: "json",
+			success: function(result){
+				console.log(result);
+				alert(result);
+				window.location.reload();
+			},
+			error:function () {
+				alert('错误');
+			}
+		});
 		}
-		return res;
 	}
 </script>
 </head>
@@ -35,19 +70,23 @@
 			<div class="banner">
 				<div class="bannerLeft">
 					<span class="logoBg"></span> <span
-						style="font-size: 22px; font-weight: bold">云端网盘</span>
+						style="font-size: 22px; font-weight: bold"><spring:message code="TITLE"/></span>
 				</div>
 				<div class="bannerCenter">
 					<ul>
-						<li class="active"><a href="index">网盘</a></li>
-						<li><a href="index">分享</a></li>
-						<li><a href="fileupload">正在上传</a></li>
-						<li><a href="filedownload">正在下载</a></li>
+						<li class="active"><a href="index"><spring:message code="wp"/></a></li>
+						<li><a href="index"><spring:message code="fx"/></a></li>
+						<li><a href="fileupload"><spring:message code="zzsc"/></a></li>
+						<li><a href="filedownload"><spring:message code="zzxz"/></a></li>
 					</ul>
 				</div>
 				<div class="bannerRight">
+					<span><a href="translate?local=zh">中文</a></span>
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					<span><a href="translate?local=en">English</a></span>
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 					<span class="person"><img src="${basePath}/static/images/person.jpg"></span> <span>${sessionScope.user.username }</span>
-					<span style="margin-left: 10px; margin-right: 10px;">丨</span> <span>当前目录:
+					<span style="margin-left: 10px; margin-right: 10px;">丨</span> <span><spring:message code="dqml"/>:
 					<c:choose>
 						<c:when test="${sessionScope.currentFolder==''}">
 							主界面
@@ -58,7 +97,7 @@
 					</c:choose>
 			</span>
 					<span style="margin-left: 10px; margin-right: 10px;">丨</span> <span><a
-						href="">客户端下载</a></span> <span class="center">会员中心</span>
+						href=""><spring:message code="khdxz"/> </a></span> <span class="center"><spring:message code="hyzx"/> </span>
 				</div>
 			</div>
 			<div class="content">
@@ -99,9 +138,12 @@
 							</div>
 						</div>
 						<div class="operatRight">
-							<input type="text" placeholder="搜索您的文件" /> <span
-								class="searchBg"></span> <span class="sort"></span> <span
+							<form action="search" method="post" id="search">
+							<input name="condition" type="text" placeholder="搜索您的文件(名称 时间)" />
+								<span class="searchBg" onclick="document.getElementById('search').submit();"></span>
+								<span class="sort"></span> <span
 								class="sortTwo"></span>
+							</form>
 						</div>
 						<div style="clear: both;"></div>
 					</div>
@@ -130,9 +172,8 @@
 											><span class="folder"></span> <c:out value="${rf.foldername }"></c:out></a>
 										</form>
 									</td>
-									<td class="hideArea"><a
-										href="index.do?folderId=${rf.folderid}"><span
-											class="share"></span></a></td>
+									<td class="hideArea"><span class="huishouq"
+															   onclick="deleteFolderFun(${rf.folderid})"></span> </td>
 									<td>目录</td>
 									<td>-</td>
 									<td><c:out value="${rf.createtime }"></c:out></td>

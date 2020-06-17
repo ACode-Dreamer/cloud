@@ -17,7 +17,7 @@
         <result column="mark" jdbcType="VARCHAR" property="mark"/>
     </resultMap>
     <select id="queryFile" parameterType="int" resultMap="BaseResultMap">
-        select * from cd_file where userId = #{userId} and folderId IS NULL
+        select * from cd_file where userId = #{userId} and folderId IS NULL and status = 1
     </select>
 
     <insert id="insertFile" parameterType="File">
@@ -27,7 +27,7 @@
       mark)
     values (#{filename,jdbcType=VARCHAR}, #{folderid,jdbcType=INTEGER}, #{typeid,jdbcType=INTEGER},
       #{userid,jdbcType=INTEGER}, #{createtime,jdbcType=VARCHAR}, #{owner,jdbcType=VARCHAR},
-      #{status,jdbcType=INTEGER}, #{hdfspath,jdbcType=VARCHAR}, #{filesize,jdbcType=BIGINT},
+      1, #{hdfspath,jdbcType=VARCHAR}, #{filesize,jdbcType=BIGINT},
       #{mark,jdbcType=VARCHAR})
     </insert>
 
@@ -36,6 +36,26 @@
     </select>
 
     <select id="queryFileByFolder"  resultMap="BaseResultMap">
-     select * from cd_file where folderId = #{folderid} and userId = #{userId}
+     select * from cd_file where folderId = #{folderid} and userId = #{userId} and status = 1
     </select>
+
+    <select id="queryFileByName" resultMap="BaseResultMap">
+        select * from cd_file where fileName like CONCAT('%',#{name},'%') and userId = #{userId} and status = 1
+    </select>
+
+    <select id="queryFileByTime" resultMap="BaseResultMap">
+        select * from cd_file where createTime like CONCAT('%',#{time},'%') and userId = #{userId} and status = 1
+    </select>
+
+    <update id="deleteFile" parameterType="int">
+        update cd_file set status = 0 where fileId = #{fileId}
+    </update>
+
+    <select id="queryRecycle" parameterType="int" resultMap="BaseResultMap">
+        select * from cd_file where userId = #{userId} and status = 0
+    </select>
+
+    <delete id="removeFile" parameterType="int">
+         DELETE FROM cd_file WHERE fileId=#{fileId};
+    </delete>
 </mapper>

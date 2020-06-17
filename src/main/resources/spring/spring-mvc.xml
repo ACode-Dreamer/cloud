@@ -52,4 +52,25 @@
         <!-- 上传文件的编码 -->
         <property name="defaultEncoding" value="UTF-8"></property>
     </bean>
+
+    <!-- 存储区域设置信息 SessionLocaleResolver类通过一个预定义会话名将区域化信息存储在会话中 从session判断用户语言defaultLocale
+           :默认语言 -->
+    <bean id="localeResolver"
+          class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+        <property name="defaultLocale" value="zh_CN"/>
+    </bean>
+
+    <!--国际化-->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="/WEB-INF/resource/messages"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+    <!--统一异常处理-->
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <!-- 指定所有没有指定的异常,都跳转到该页面 -->
+        <property name="defaultErrorView" value="error"/>
+        <!-- 跳转时携带异常对象 -->
+        <property name="exceptionAttribute" value="ex"></property>
+    </bean>
 </beans>

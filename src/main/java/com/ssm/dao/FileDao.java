@@ -39,4 +39,29 @@ public interface FileDao {
      * @return
      */
     List<File> queryFileByFolder(@Param("folderid") int folderId,@Param("userId") int userId);
+    /**
+     * 根据名称查文件
+     */
+    List<File> queryFileByName(@Param("name") String name,@Param("userId") int userId);
+
+    /**
+     * 根据时间查文件
+     */
+    List<File> queryFileByTime(@Param("time") String time,@Param("userId") int userId);
+    /**
+     * flag删除
+     */
+    int deleteFile(int fileId);
+    /**
+     * 查询所有删除的文件
+     * @param userid
+     * @return
+     */
+    List<File> queryRecycle(int userid);
+    /**
+     * 移除文件
+     * @param fileId
+     * @return
+     */
+    int removeFile(int fileId);
 }

@@ -1,5 +1,6 @@
 package com.ssm.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.ssm.pojo.FileType;
 import com.ssm.pojo.Folder;
 import com.ssm.pojo.User;
@@ -13,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -47,6 +49,78 @@ public class FilesController {
 
     @Autowired
     private FolderService folderService;
+
+
+    /**
+     * 彻底删除目录
+     */
+    @RequestMapping("/removeFolder")
+    @ResponseBody
+    public String removeFolder(@RequestParam("folderId") int folderId){
+        int deleteFile = folderService.removeFolder(folderId);
+        if(deleteFile!=0){
+            return JSON.toJSONString("success");
+        }else{
+            return JSON.toJSONString("failed");
+        }
+    }
+
+    /**
+     * 彻底删除文件
+     */
+    @RequestMapping("/remove")
+    @ResponseBody
+    public String remove(@RequestParam("fileId") int fileId){
+        int deleteFile = fileService.removeFile(fileId);
+        if(deleteFile!=0){
+            return JSON.toJSONString("success");
+        }else{
+            return JSON.toJSONString("failed");
+        }
+    }
+    /**
+     * flag删除目录
+     */
+    @RequestMapping("/deleteFolder")
+    @ResponseBody
+    public String deleteFolder(@RequestParam("folderId") int folderId){
+        int deleteFile = folderService.deleteFolder(folderId);
+        if(deleteFile!=0){
+            return JSON.toJSONString("success");
+        }else{
+            return JSON.toJSONString("failed");
+        }
+    }
+
+
+    /**
+     * flag删除文件
+     * @param fileId
+     * @return
+     */
+    @RequestMapping("/delete")
+    @ResponseBody
+    public String delete(@RequestParam("fileId") int fileId){
+        int deleteFile = fileService.deleteFile(fileId);
+        if(deleteFile!=0){
+            return JSON.toJSONString("success");
+        }else{
+            return JSON.toJSONString("failed");
+        }
+    }
+
+    /**
+     * 搜索文件
+     */
+    @RequestMapping("/search")
+    public String searchFile(String condition, HttpSession session){
+        //用户
+        User user = (User) session.getAttribute("user");
+        List<com.ssm.pojo.File> fileList =   fileService.queryFileByCondition(condition,user.getUserid());
+        session.setAttribute("fileList", fileList);
+        session.removeAttribute("folderList");
+        return "index";
+    }
 
     /**
      * 切换目录
@@ -91,7 +165,7 @@ public class FilesController {
     public ResponseEntity download(HttpServletRequest request, HttpServletResponse response, @RequestParam("fileId") int fileId) throws IOException {
         //查询文件信息
         com.ssm.pojo.File fileById = fileService.queryFileById(fileId);
-        File file = new File(fileById.getHdfspath());
+        File file = new File(localPath +fileById.getHdfspath());
         //需要将文件转换为字节数组-将文件读取到字节数组
         //初始化文件读取流
         FileInputStream fis = new FileInputStream(file);
@@ -183,14 +257,28 @@ public class FilesController {
         SimpleDateFormat ft = new SimpleDateFormat("yyyy年MM月dd日HH:mm:ss");
         depositFile.setCreatetime(ft.format(date));
         //地址记录
-        depositFile.setHdfspath(localPath + "/" + lastName);
+        if (folderByName != null) {
+            //不在根目录
+            depositFile.setHdfspath( "\\" + folderByName.getFoldername() + "\\" + lastName);
+        } else {
+            depositFile.setHdfspath( "\\" + lastName);
+        }
         //大小
         depositFile.setFilesize(file.getSize());
         //入库
         fileService.insertFile(depositFile);
         //真实地址下载
-        File realFile = new File(localPath, lastName);
-        file.transferTo(realFile);
+        //是否在根目录
+        if (folderByName != null) {
+            //不在根目录
+            String fileDir = localPath + "\\" + folderByName.getFoldername() + "\\" + lastName;
+            File realFile = new File(fileDir);
+            file.transferTo(realFile);
+        } else {
+            //在根目录
+            File realFile = new File(localPath, lastName);
+            file.transferTo(realFile);
+        }
         return "/index";
     }
 

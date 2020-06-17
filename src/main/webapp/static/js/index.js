@@ -29,7 +29,8 @@ function showFileUpload(url) {
         //alert($('#uploadFile').val());
         
         // 清空file标签的value，否则再次提交此文件时，onchange事件就不触发了
-        $('#uploadFile').val(''); 
+        $('#uploadFile').val('');
+		window.location.reload();
         
     }); 
     
