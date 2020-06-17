@@ -20,7 +20,7 @@ public class FileServiceImpl implements FileService {
     private FileDao fileDao;
 
     /**
-     * 查询文件根据用户
+     * 查询用户的文件
      * @param userId
      * @return
      */
@@ -40,7 +40,7 @@ public class FileServiceImpl implements FileService {
     }
 
     /**
-     * 根据id查文件
+     * 根据文件id查文件
      * @param fileId
      * @return
      */

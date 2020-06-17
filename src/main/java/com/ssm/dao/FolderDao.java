@@ -27,7 +27,18 @@ public interface FolderDao {
      */
     int insertFolder(Folder folder);
 
+    /**
+     * 根据父目录id和用户id查询目录
+     * @param folderid
+     * @param userId
+     * @return
+     */
     List<Folder> queryFolderByFolder(@Param("folderId") int folderid,@Param("userId") int userId);
 
+    /**
+     * 根据目录名查目录信息
+     * @param currentFolder
+     * @return
+     */
     Folder queryFolderByName(String currentFolder);
 }

@@ -20,7 +20,7 @@ public class FolderServiceImpl implements FolderService {
     private FolderDao folderDao;
 
     /**
-     * 根据用户查询文件夹
+     * 查询用户目录
      * @param userId
      * @return
      */
@@ -30,7 +30,7 @@ public class FolderServiceImpl implements FolderService {
     }
 
     /**
-     * 插入文件夹
+     * 插入目录
      * @param folder
      * @return
      */
