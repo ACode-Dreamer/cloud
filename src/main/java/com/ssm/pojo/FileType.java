@@ -3,16 +3,17 @@ package com.ssm.pojo;
 import lombok.Data;
 
 import java.io.Serializable;
-
+/**
+ * 文件类型
+ */
 @Data
 public class FileType implements Serializable {
 
-	private static final long serialVersionUID = 3144291845175202659L;
+	private Integer typeid;
 
-	private int typeId;
-	private String typeName;
-	private String extension;
-	private String mark;
+	private String typename;
+
+	private static final long serialVersionUID = 1L;
 
 
 }

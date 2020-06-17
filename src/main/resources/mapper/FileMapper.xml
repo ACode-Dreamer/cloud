@@ -4,19 +4,38 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ssm.dao.FileDao">
     <resultMap id="BaseResultMap" type="File">
-        <result column="fileId" jdbcType="INTEGER" property="fileid" />
-        <result column="fileName" jdbcType="VARCHAR" property="filename" />
-        <result column="folderId" jdbcType="INTEGER" property="folderid" />
-        <result column="typeId" jdbcType="INTEGER" property="typeid" />
-        <result column="userId" jdbcType="INTEGER" property="userid" />
-        <result column="createTime" jdbcType="VARCHAR" property="createtime" />
-        <result column="owner" jdbcType="VARCHAR" property="owner" />
-        <result column="status" jdbcType="INTEGER" property="status" />
-        <result column="hdfsPath" jdbcType="VARCHAR" property="hdfspath" />
-        <result column="fileSize" jdbcType="INTEGER" property="filesize" />
-        <result column="mark" jdbcType="VARCHAR" property="mark" />
+        <result column="fileId" jdbcType="INTEGER" property="fileid"/>
+        <result column="fileName" jdbcType="VARCHAR" property="filename"/>
+        <result column="folderId" jdbcType="INTEGER" property="folderid"/>
+        <result column="typeId" jdbcType="INTEGER" property="typeid"/>
+        <result column="userId" jdbcType="INTEGER" property="userid"/>
+        <result column="createTime" jdbcType="VARCHAR" property="createtime"/>
+        <result column="owner" jdbcType="VARCHAR" property="owner"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="hdfsPath" jdbcType="VARCHAR" property="hdfspath"/>
+        <result column="fileSize" jdbcType="BIGINT" property="filesize"/>
+        <result column="mark" jdbcType="VARCHAR" property="mark"/>
     </resultMap>
     <select id="queryFile" parameterType="int" resultMap="BaseResultMap">
-        select * from cd_file where userId = #{userId}
+        select * from cd_file where userId = #{userId} and folderId IS NULL
+    </select>
+
+    <insert id="insertFile" parameterType="File">
+       insert into cd_file (fileName, folderId, typeId,
+      userId, createTime, `owner`,
+      `status`, hdfsPath, fileSize,
+      mark)
+    values (#{filename,jdbcType=VARCHAR}, #{folderid,jdbcType=INTEGER}, #{typeid,jdbcType=INTEGER},
+      #{userid,jdbcType=INTEGER}, #{createtime,jdbcType=VARCHAR}, #{owner,jdbcType=VARCHAR},
+      #{status,jdbcType=INTEGER}, #{hdfspath,jdbcType=VARCHAR}, #{filesize,jdbcType=BIGINT},
+      #{mark,jdbcType=VARCHAR})
+    </insert>
+
+    <select id="queryFileById" parameterType="int" resultMap="BaseResultMap">
+        select * from cd_file where fileId = #{fileId}
+    </select>
+
+    <select id="queryFileByFolder"  resultMap="BaseResultMap">
+     select * from cd_file where folderId = #{folderid} and userId = #{userId}
     </select>
 </mapper>

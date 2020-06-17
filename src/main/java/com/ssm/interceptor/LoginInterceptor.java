@@ -9,7 +9,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  * @program: netdisc
- * @description:
+ * @description:登录校验拦截
  * @author: Mr.Gu
  * @create: 2020-06-15 20:49
  **/

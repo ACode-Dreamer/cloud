@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.dao.FiletypeDao">
+    <resultMap id="BaseResultMap" type="Filetype">
+        <id column="typeid" jdbcType="INTEGER" property="typeid"/>
+        <result column="typename" jdbcType="VARCHAR" property="typename"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    typeid, typename
+  </sql>
+    <select id="selectAllFileType" resultType="FileType">
+    select * from cd_filetype
+  </select>
+</mapper>

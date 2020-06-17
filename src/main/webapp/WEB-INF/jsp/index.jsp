@@ -41,13 +41,22 @@
 					<ul>
 						<li class="active"><a href="index">网盘</a></li>
 						<li><a href="index">分享</a></li>
-						<li><a href="fileupload.jsp">正在上传</a></li>
-						<li><a href="filedownload.jsp">正在下载</a></li>
+						<li><a href="fileupload">正在上传</a></li>
+						<li><a href="filedownload">正在下载</a></li>
 					</ul>
 				</div>
 				<div class="bannerRight">
 					<span class="person"><img src="${basePath}/static/images/person.jpg"></span> <span>${sessionScope.user.username }</span>
-					<span style="margin-left: 10px; margin-right: 10px;">丨</span> <span>当前目录:${sessionScope.currentFolder.hdfsPath }</span>
+					<span style="margin-left: 10px; margin-right: 10px;">丨</span> <span>当前目录:
+					<c:choose>
+						<c:when test="${sessionScope.currentFolder==''}">
+							主界面
+						</c:when>
+						<c:otherwise>
+							<c:out value="${sessionScope.currentFolder}"></c:out>
+						</c:otherwise>
+					</c:choose>
+			</span>
 					<span style="margin-left: 10px; margin-right: 10px;">丨</span> <span><a
 						href="">客户端下载</a></span> <span class="center">会员中心</span>
 				</div>
@@ -56,29 +65,13 @@
 				<div class="contentLeft" id="contentLeft">
 					<ul>
                         <li class="active"><span class="contentBg bg1"></span>
-                            <a href="index.do?folderId=${rf.folderId}"> 全部文件</a>
+                            <a href="index"> 全部文件</a>
                         </li>
-						<li>
-							<a href="index.do?folderId=${rf.folderId}"> 图片</a>
-						</li>
-						<li>
-							<a href="index.do?folderId=${rf.folderId}"> 文档</a>
-						</li>
-						<li>
-							<a href="index.do?folderId=${rf.folderId}"> 视频</a>
-						</li>
-                        <li>
-                            <a href="index.do?folderId=${rf.folderId}"> 音乐</a>
-                        </li>
-                        <li>
-                            <a href="index.do?folderId=${rf.folderId}"> 其他</a>
-                        </li>
-
 						<c:forEach var="rf" items="${sessionScope.sysFolderList }">
 							<li
-								<c:if test="${sessionScope.currentFolder.hdfsPath==rf.hdfsPath }">class="active"</c:if>>
-								<a href="index.do?folderId=${rf.folderId}"> <c:out
-										value="${rf.folderName }"></c:out></a>
+								<c:if test="${sessionScope.currentFolder==rf.typename }">class="active"</c:if>>
+								<a href="index.do?typeId=${rf.typeid}"> <c:out
+										value="${rf.typename }"></c:out></a>
 							</li>
 						</c:forEach>
 						<li><span class="contentBg bg2"></span><a href="">我的分享</a></li>
@@ -127,10 +120,16 @@
 							</tr>
 							<c:forEach var="rf" items="${sessionScope.folderList }">
 								<tr>
-									<td><input type="checkbox" disabled="disabled"
-										style="margin-right: 10px; margin-right: 50px" /> <a
-										href="index.do?folderId=${rf.folderid}"><span
-											class="folder"></span> <c:out value="${rf.foldername }"></c:out></a></td>
+									<td>
+										<form id="${rf.folderid}" method="post" action="switchFolder">
+											<input type="hidden" name="folderid" value="${rf.folderid}" />
+											<input type="hidden" name="foldername" value="${rf.foldername}" />
+											<input type="checkbox" disabled="disabled"
+												   style="margin-right: 10px; margin-right: 50px" />
+											<a href="#" onclick="document.getElementById(${rf.folderid}).submit();"
+											><span class="folder"></span> <c:out value="${rf.foldername }"></c:out></a>
+										</form>
+									</td>
 									<td class="hideArea"><a
 										href="index.do?folderId=${rf.folderid}"><span
 											class="share"></span></a></td>
@@ -146,7 +145,7 @@
 										class="myfile"></span> <c:out value="${rf.filename }"></c:out></td>
 									<td class="hideArea"><span class="huishouq"
 										onclick="deleteFileFun(${rf.fileid})"></span> <a
-										href="hdfs.do?type=download&fileId=${rf.fileid }"><span
+										href="download?fileId=${rf.fileid }"><span
 											class="download"></span></a></td>
 									<td>文件</td>
 									<td><c:out value="${rf.filesize }"></c:out></td>
@@ -163,8 +162,9 @@
 	<div id="createFileWindow" class="easyui-window" title="Modal Window"
 		data-options="modal:true,closed:true,iconCls:'icon-save'"
 		style="width: 300px; height: 120px; padding: 10px;">
-		<form action="hdfs.do?type=createFolder" method="post">
+		<form action="createFolder" method="post">
 			<table>
+				<input type="hidden" name="currentFolder" value="${sessionScope.currentFolder}">
 				<tr>
 					<td>请输入文件夹名称:</td>
 					<td><input id="folderName" name="folderName" type="text" /></td>
@@ -176,7 +176,7 @@
 			</table>
 		</form>
 	</div>
-	<form id="uploadForm" action="upload.do" method="post"
+	<form id="uploadForm" action="upload" method="post"
 		enctype="multipart/form-data">
 		<input type="file" name="uploadFile" id="uploadFile"
 			style="visibility: hidden; position: absolute; top: 0px; width: 0px" />

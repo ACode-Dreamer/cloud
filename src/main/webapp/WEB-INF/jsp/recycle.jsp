@@ -38,7 +38,7 @@
 				</div>
 				<div class="bannerRight">
 					<span class="person"><img src="${basePath}/static/images/person.jpg"></span> <span>${sessionScope.user.username }</span>
-					<span style="margin-left: 10px; margin-right: 10px;">丨</span> <span>当前目录:${sessionScope.currentFolder.hdfsPath }</span>
+					<span style="margin-left: 10px; margin-right: 10px;">丨</span> <span>当前目录:${sessionScope.currentFolder }</span>
 					<span style="margin-left: 10px; margin-right: 10px;">丨</span> <span><a
 						href="">客户端下载</a></span> <span class="center">会员中心</span>
 				</div>
@@ -46,11 +46,14 @@
 			<div class="content">
 				<div class="contentLeft" id="contentLeft">
 					<ul>
+						<li class="active"><span class="contentBg bg1"></span>
+							<a href="index"> 全部文件</a>
+						</li>
 						<c:forEach var="rf" items="${sessionScope.sysFolderList }">
 							<li
-									<c:if test="${sessionScope.currentFolder.hdfsPath==rf.hdfsPath }">class="active"</c:if>>
-								<a href="index.do?folderId=${rf.folderId}"> <c:out
-										value="${rf.folderName }"></c:out></a>
+									<c:if test="${sessionScope.currentFolder==rf.typename }">class="active"</c:if>>
+								<a href="index.do?folderId=${rf.typeid}"> <c:out
+										value="${rf.typename }"></c:out></a>
 							</li>
 						</c:forEach>
 						<li><span class="contentBg bg2"></span><a href="">我的分享</a></li>

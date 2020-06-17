@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * @program: netdisc
- * @description:
+ * @description:文件夹服务
  * @author: Mr.Gu
  * @create: 2020-06-15 22:01
  **/
@@ -19,8 +19,44 @@ public class FolderServiceImpl implements FolderService {
     @Autowired
     private FolderDao folderDao;
 
+    /**
+     * 根据用户查询文件夹
+     * @param userId
+     * @return
+     */
     @Override
     public List<Folder> queryFolder(int userId) {
         return folderDao.queryFolder(userId);
+    }
+
+    /**
+     * 插入文件夹
+     * @param folder
+     * @return
+     */
+    @Override
+    public int insertFolder(Folder folder) {
+        return folderDao.insertFolder(folder);
+    }
+
+    /**
+     * 根据目录和用户id查目录
+     * @param
+     * @param userid
+     * @return
+     */
+    @Override
+    public List<Folder> queryFolderByFolder(int folderid, int userid) {
+        return folderDao.queryFolderByFolder(folderid,userid);
+    }
+
+    /**
+     * 根据名字查目录
+     * @param currentFolder
+     * @return
+     */
+    @Override
+    public Folder queryFolderByName(String currentFolder) {
+        return folderDao.queryFolderByName(currentFolder);
     }
 }

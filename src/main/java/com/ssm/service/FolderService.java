@@ -12,4 +12,8 @@ import java.util.List;
  **/
 public interface FolderService {
     List<Folder> queryFolder(int userId);
+    int insertFolder(Folder folder);
+    List<Folder> queryFolderByFolder(int folderid, int userid);
+
+    Folder queryFolderByName(String currentFolder);
 }

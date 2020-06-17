@@ -1,13 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
+%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <title>云端网盘</title>
-<link rel="stylesheet" type="text/css" href="./css/index.css">
-<script type="text/javascript" src="./js/index.js"></script>
-<script type="text/javascript" src="./js/jquery/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="${basePath}/static/css/index.css">
+<script type="text/javascript" src="${basePath}/static/js/index.js"></script>
+<script type="text/javascript" src="${basePath}/static/js/jquery/jquery.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(
 			function() {
@@ -50,15 +56,15 @@
 				</div>
 				<div class="bannerCenter">
 					<ul>
-						<li><a href="index.do">网盘</a></li>
-						<li><a href="index.do">分享</a></li>
-						<li class="active"><a href="fileupload.jsp">正在上传</a></li>
-						<li><a href="filedownload.jsp">正在下载</a></li>
+						<li><a href="index">网盘</a></li>
+						<li><a href="index">分享</a></li>
+						<li class="active"><a href="fileupload">正在上传</a></li>
+						<li><a href="filedownload">正在下载</a></li>
 					</ul>
 				</div>
 				<div class="bannerRight">
-					<span class="person"><img src="./images/person.jpg"></span> <span>${sessionScope.user.userName }</span>
-					<span style="margin-left: 10px; margin-right: 10px;">丨</span> <span>当前目录:${sessionScope.currentFolder.hdfsPath }</span>
+					<span class="person"><img src="${basePath}/static/images/person.jpg"></span> <span>${sessionScope.user.username }</span>
+					<span style="margin-left: 10px; margin-right: 10px;">丨</span> <span>当前目录:${sessionScope.currentFolder}</span>
 					<span style="margin-left: 10px; margin-right: 10px;">丨</span> <span><a
 						href="">客户端下载</a></span> <span class="center">会员中心</span>
 				</div>

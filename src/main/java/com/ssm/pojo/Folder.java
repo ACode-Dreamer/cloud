@@ -3,7 +3,9 @@ package com.ssm.pojo;
 import lombok.Data;
 
 import java.io.Serializable;
-
+/**
+ * 文件夹
+ */
 @Data
 public class Folder implements Serializable {
 	private Integer folderid;

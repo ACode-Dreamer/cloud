@@ -17,9 +17,33 @@
               <option name="name" value="cd_file" />
               <option name="overrideJava" value="true" />
               <option name="overrideXML" value="true" />
-              <option name="primaryKey" value="" />
+              <option name="primaryKey" value="fileId" />
               <option name="projectFolder" value="$PROJECT_DIR$" />
               <option name="tableName" value="cd_file" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="cd_filetype">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CdFiletypeDao" />
+              <option name="daoPackage" value="generate" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="CdFiletype" />
+              <option name="modelPackage" value="generate" />
+              <option name="name" value="cd_filetype" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="typeid" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="cd_filetype" />
               <option name="useLombokPlugin" value="true" />
               <option name="useSchemaPrefix" value="true" />
               <option name="xmlMvnPath" value="src/main/resources" />

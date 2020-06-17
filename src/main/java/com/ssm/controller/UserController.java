@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  * @program: netdisc
- * @description:
+ * @description:用户控制
  * @author: Mr.Gu
  * @create: 2020-06-15 15:44
  **/
@@ -22,16 +22,31 @@ public class UserController {
     @Autowired
     UserServiceImpl userService;
 
+    /**
+     * 登录页面
+     * @return
+     */
     @RequestMapping(value = "/login",method = RequestMethod.GET)
     public String login() {
         return "login";
     }
 
+    /**
+     * 注册页面
+     * @return
+     */
     @RequestMapping(value = "/register",method = RequestMethod.GET)
     public String register() {
         return "register";
     }
 
+    /**
+     * 用户注册
+     * @param user
+     * @param model
+     * @param httpSession
+     * @return
+     */
     @RequestMapping(value = "/register",method = RequestMethod.POST)
     public String userRegister(User user, Model model, HttpSession httpSession) {
         int existUser = userService.existUser(user);
@@ -56,6 +71,13 @@ public class UserController {
         }
     }
 
+    /**
+     * 用户登录
+     * @param user
+     * @param model
+     * @param httpSession
+     * @return
+     */
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public String userLogin(User user, Model model, HttpSession httpSession) {
         User login = userService.login(user);

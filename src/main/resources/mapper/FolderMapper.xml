@@ -15,6 +15,23 @@
         <result column="mark" jdbcType="VARCHAR" property="mark" />
     </resultMap>
     <select id="queryFolder" parameterType="int" resultMap="BaseResultMap">
-        select * from cd_folder where userId = #{userId}
+        select * from cd_folder where userId = #{userId} and parentId IS NULL
+    </select>
+
+    <insert id="insertFolder" parameterType="Folder">
+    insert into cd_folder (folderName, hdfsPath, parentId,
+      `owner`, userId, createTime,
+      `status`, mark)
+    values (#{foldername,jdbcType=VARCHAR}, #{hdfspath,jdbcType=VARCHAR}, #{parentid,jdbcType=INTEGER},
+      #{owner,jdbcType=VARCHAR}, #{userid,jdbcType=INTEGER}, #{createtime,jdbcType=VARCHAR},
+      #{status,jdbcType=INTEGER}, #{mark,jdbcType=VARCHAR})
+    </insert>
+
+    <select id="queryFolderByFolder" resultMap="BaseResultMap">
+             select * from cd_folder where parentId = #{folderId} and userId = #{userId}
+    </select>
+
+    <select id="queryFolderByName" parameterType="string" resultMap="BaseResultMap">
+        select * from cd_folder where folderName = #{currentFolder}
     </select>
 </mapper>
