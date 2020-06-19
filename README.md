@@ -3,6 +3,8 @@
 ## 技术点
 ssm框架 log4j日志 druid连接池 lombok插件 fastjson
 ## 实现思路
+* 加密
+用户密码使用md5加密 文件名使用uuid命名
 
 * 拦截器
 拦截除了登录和注册的所有页面
